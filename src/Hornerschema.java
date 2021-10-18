@@ -14,9 +14,10 @@ public class Hornerschema {
 		System.out.println("Bitte gebe die Basis des Zahlensystems ein: ");
 		basis = scanner.nextInt();
 	
-		
-		long x = Long.parseLong(String.valueOf(zahl.charAt((int) ((zahl.length()-1)))));
+		long x = Long.parseLong(String.valueOf(zahl.charAt((int) ((zahl.length()-2)))));
 
+		System.out.println(zahl.length());
+		
 		for(int i = 1; i < zahl.length(); i++) {
 			
 			System.out.println( x + " * " + basis + " + " + Long.parseLong(String.valueOf(zahl.charAt((int) ((zahl.length()-1)-i)))));
