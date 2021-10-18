@@ -22,9 +22,9 @@ public class Hornerschema {
 			element = "14";
 		} else if(element.equalsIgnoreCase("d")) {
 			element = "13";
-		}else if(element.equalsIgnoreCase("c")) {
+		} else if(element.equalsIgnoreCase("c")) {
 			element = "12";
-		}else if(element.equalsIgnoreCase("b")) {
+		} else if(element.equalsIgnoreCase("b")) {
 			element = "11";
 		} else if(element.equalsIgnoreCase("a")) {
 			element = "10";
@@ -43,9 +43,9 @@ public class Hornerschema {
 				element1 = "14";
 			} else if(element1.equalsIgnoreCase("d")) {
 				element1 = "13";
-			}else if(element1.equalsIgnoreCase("c")) {
+			} else if(element1.equalsIgnoreCase("c")) {
 				element1 = "12";
-			}else if(element1.equalsIgnoreCase("b")) {
+			} else if(element1.equalsIgnoreCase("b")) {
 				element1 = "11";
 			} else if(element1.equalsIgnoreCase("a")) {
 				element1 = "10";
