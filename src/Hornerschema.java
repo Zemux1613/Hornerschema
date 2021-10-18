@@ -14,21 +14,21 @@ public class Hornerschema {
 		System.out.println("Bitte gebe die Basis des Zahlensystems ein: ");
 		basis = scanner.nextInt();
 	
-		long x = 0L;
-		long length = 0L;
+		System.out.println(String.valueOf(zahl.charAt((int) ((zahl.length()-1)))));
+		
+		long x = Long.parseLong(String.valueOf(zahl.charAt((int) ((zahl.length()-1)))));
+		long length = 1L;
 
 		while(zahl.length() > length) {
 			
-			x = x * basis + Long.parseLong(
-					String.valueOf(
-									zahl.charAt((int) ((zahl.length()-1)-length))
-							      )
-					);
+			x = x * basis + Long.parseLong(String.valueOf(zahl.charAt((int) ((zahl.length()-1)-length))));
 			length++;
+		
 		}
 		
 		System.out.println("Zahl in Dezimal: " + x);
-	
+		scanner.close();
+		
 	}
 	
 }
