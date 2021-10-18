@@ -20,8 +20,8 @@ public class Hornerschema {
 		
 		for(int i = 0; i+1 < zahl.length(); i++) {
 			
-			System.out.println( x + " * " + basis + " + " + Long.parseLong(String.valueOf(zahl.charAt(zahl.length()-(1+i)))));
-			x = x * basis + Long.parseLong(String.valueOf(zahl.charAt(zahl.length()-(1+i))));
+			System.out.println( x + " * " + basis + " + " + Long.parseLong(String.valueOf(zahl.charAt(1+i))));
+			x = x * basis + Long.parseLong(String.valueOf(zahl.charAt((1+i))));
 		
 		}
 		
