@@ -15,7 +15,7 @@ public class Hornerschema {
 		basis = scanner.nextInt();
 	
 		long x = 0L;
-		long length = 0l;
+		long length = 0L;
 
 		while(zahl.length() > length) {
 			
