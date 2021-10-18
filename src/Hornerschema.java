@@ -16,6 +16,28 @@ public class Hornerschema {
 	
 		String element = String.valueOf(zahl.charAt(0));
 		
+		element = convertHexToDezimal(element);
+		
+		long x = Long.parseLong(element);
+
+		System.out.println(zahl.length());
+		
+		for(int i = 0; i+1 < zahl.length(); i++) {
+			
+			String element1 = String.valueOf(zahl.charAt(1+i));
+			element1 = convertHexToDezimal(element1);
+			
+			System.out.println( x + " * " + basis + " + " + Long.parseLong(element1 ) );
+			x = x * basis + Long.parseLong(element1);
+		
+		}
+		
+		System.out.println("Zahl in Dezimal: " + x);
+		scanner.close();
+		
+	}
+
+	private static String convertHexToDezimal(String element) {
 		if(element.equalsIgnoreCase("f")) {
 			element = "15";
 		} else if(element.equalsIgnoreCase("e")) {
@@ -29,36 +51,7 @@ public class Hornerschema {
 		} else if(element.equalsIgnoreCase("a")) {
 			element = "10";
 		}
-		
-		long x = Long.parseLong(element);
-
-		System.out.println(zahl.length());
-		
-		for(int i = 0; i+1 < zahl.length(); i++) {
-			
-			String element1 = String.valueOf(zahl.charAt(1+i));
-			if(element1.equalsIgnoreCase("f")) {
-				element1 = "15";
-			} else if(element1.equalsIgnoreCase("e")) {
-				element1 = "14";
-			} else if(element1.equalsIgnoreCase("d")) {
-				element1 = "13";
-			} else if(element1.equalsIgnoreCase("c")) {
-				element1 = "12";
-			} else if(element1.equalsIgnoreCase("b")) {
-				element1 = "11";
-			} else if(element1.equalsIgnoreCase("a")) {
-				element1 = "10";
-			}
-			
-			System.out.println( x + " * " + basis + " + " + Long.parseLong(element1 ) );
-			x = x * basis + Long.parseLong(element1);
-		
-		}
-		
-		System.out.println("Zahl in Dezimal: " + x);
-		scanner.close();
-		
+		return element;
 	}
 	
 }
